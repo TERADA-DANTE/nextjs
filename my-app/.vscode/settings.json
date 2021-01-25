@@ -7,5 +7,6 @@
 "files.autoSave": "onFocusChange",
 "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
-}
+},
+"emmet.triggerExpansionOnTab": true,  "emmet.includeLanguages": {    "javascript": "javascriptreact" }
 }
