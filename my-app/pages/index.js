@@ -1,11 +1,16 @@
 import Head from 'next/head';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 
 export default function Home() {
+  const [list, setList] = useState([]);
   const API = 'http://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline';
   function getData() {
-
+    axios.get(API).then((res) => setList(res.data));
   }
+  useEffect(() => {
+    getData();
+  }, []);
   return (
     <div>
       <Head>
