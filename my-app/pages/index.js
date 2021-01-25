@@ -18,9 +18,12 @@ export default function Home() {
       <Head>
         <title>HOME | TERADA</title>
       </Head>
-      <Header as="h3">Best items</Header>
+      <Header as="h3">Best Items</Header>
       <Divider />
-      <ItemList list={list} />
+      <ItemList list={list.slice(0, 9)} />
+      <Header as="h3">New Items</Header>
+      <Divider />
+      <ItemList list={list.slice(9, 18)} />
 
     </div>
   );
