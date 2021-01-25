@@ -6,11 +6,11 @@ import Top from '../src/components/Top';
 
 function MyApp({ Component, pageProps }) {
   return (
-    <>
+    <div style={{ padding: '20px 200px' }}>
       <Top />
       <Component {...pageProps} />
       <Footer />
-    </>
+    </div>
   );
 }
 
