@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import ItemList from '../src/components/ItemList';
 
 export default function Home() {
   const [list, setList] = useState([]);
@@ -16,7 +17,7 @@ export default function Home() {
       <Head>
         <title>HOME | TERADA</title>
       </Head>
-      hello world
+      <ItemList list={list} />
     </div>
   );
 }
