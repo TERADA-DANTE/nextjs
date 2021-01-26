@@ -1,7 +1,9 @@
 import Head from 'next/head';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Divider, Header, Loader } from 'semantic-ui-react';
+import {
+  Divider, Header, Dimmer, Loader, Image, Segment,
+} from 'semantic-ui-react';
 import ItemList from '../src/components/ItemList';
 
 export default function Home() {
@@ -14,22 +16,25 @@ export default function Home() {
   }
   useEffect(() => {
     getData();
-    setIsLoading(false);
-    // setTimeout(() => setIsLoading(false), 1000);
+
+    setTimeout(() => setIsLoading(false), 500);
   }, []);
   return (
     <>
       {isLoading ? (
-        <div style={{ padding: '300px 0' }}>
-          <Loader inline="centered" active>
-            Loading
-          </Loader>
-        </div>
+        <Segment>
+          <Dimmer active>
+            <Loader />
+          </Dimmer>
+
+          <Image src="/images/wireframe/short-paragraph.png" />
+        </Segment>
       )
         : (
           <div>
             <Head>
               <title>HOME | TERADA</title>
+              <meta name="description" content="My private nextjs tutorial" />
             </Head>
             <Header as="h3">Best Items</Header>
             <Divider />
