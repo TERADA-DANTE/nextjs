@@ -10,7 +10,7 @@ export default function Home() {
   const [list, setList] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
-  const API = 'http://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline';
+  const API = process.env.NEXT_PUBLIC_API_URL;
   function getData() {
     axios.get(API).then((res) => setList(res.data));
   }
