@@ -25,6 +25,11 @@ export default function Gnb() {
         active={activeItem === 'about'}
         onClick={goLink}
       />
+      <Menu.Item
+        name="404"
+        active={activeItem === 'about'}
+        onClick={() => router.push('/404')}
+      />
     </Menu>
   );
 }
