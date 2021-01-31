@@ -15,7 +15,7 @@ export default function Nav() {
       background: #e0e6fb;
     }
     span {
-      margin-left: 4px;
+      margin-left: 4 px;
     }
     display: flex;
     flex-direction: row;
