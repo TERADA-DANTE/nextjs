@@ -25,8 +25,35 @@ const Button = styled.button`
 
 const Logo = styled.div`
   display: flex;
+
   justify-content: center;
   align-items: center;
+`;
+const Nav = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 10px auto 10px;
+  box-shadow: rgb(0 0 0 / 12%) -1px 1px 20px;
+  background: white;
+  border-radius: 50px;
+`;
+const NavButton = styled.div`
+  :hover {
+    background: #e0e6fb;
+  }
+  span {
+    margin-left: 4px;
+  }
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 11px;
+  border-radius: 50px;
+  color: rgb(134, 134, 134);
+  padding: 5px 12px;
+  cursor: pointer;
 `;
 export default function Home() {
   return (
@@ -42,6 +69,16 @@ export default function Home() {
           <img width="20px" height="20px" src="icons/menu.svg" alt="menu" />
         </Button>
       </Header>
+      <Nav>
+        <NavButton>
+          <img width="12px" height="12px" src="icons/japan.svg" alt="japan" />
+          <span>国内</span>
+        </NavButton>
+        <NavButton>
+          <img width="12px" height="12px" src="icons/world.svg" alt="world" />
+          <span>世界</span>
+        </NavButton>
+      </Nav>
     </Layout>
   );
 }
