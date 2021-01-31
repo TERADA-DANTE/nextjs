@@ -1,13 +1,8 @@
 import "../styles/globals.css";
-import "tailwindcss/tailwind.css";
+// import "tailwindcss/tailwind.css";
 
 function MyApp({ Component, pageProps }) {
-  return (
-    <Component
-      {...pageProps}
-      className="flex flex-col items-center justify-center"
-    />
-  );
+  return <Component {...pageProps} />;
 }
 
 export default MyApp;
