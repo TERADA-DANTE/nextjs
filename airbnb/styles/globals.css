@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;700&display=swap");
+* {
+  font-family: "Montserrat", sans-serif;
+}
+.recent-post {
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+  align-items: stretch;
+  clear: both;
+}
+@media only screen and (min-width: 768px) {
+  .archive .recent-post .list-post:nth-child(odd),
+  .category .recent-post .list-post:nth-child(odd),
+  .home .recent-post .list-post:nth-child(odd) {
+    padding-left: 24px;
+    box-shadow: -1px 0 0 0 #dfdfdf;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .recent-post .list-post:first-child {
+    padding: 0;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .recent-post .list-post:first-child {
+    flex: 0 0 100%;
+    box-shadow: none !important;
+    padding-left: 0 !important;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .recent-post .list-post:nth-child(odd) {
+    padding-left: 24px;
+    box-shadow: -1px 0 0 0 #dfdfdf;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .recent-post article.list-post {
+    flex: 0 0 50%;
+  }
+}
+
+.list-post {
+  position: relative;
+  width: 100%;
+  align-self: stretch;
+  animation: a 0.5s infinite;
+  animation-iteration-count: 1;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 48px;
+}
+
+.list-post .cover-image,
+.list-post .thumb-link {
+  display: block;
+  width: 100%;
+}
+
+a:active,
+a:hover,
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .recent-post .list-post:first-child .cover-image {
+    margin-left: -24px;
+    margin-right: -24px;
+    width: auto;
+  }
+}
+.list-post .cover-image {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+}
+.list-post .cover-image,
+.list-post .thumb-link {
+  display: block;
+  width: 100%;
+}
+
+.cover-image {
+  background-image: url("https://images.unsplash.com/photo-1585399000684-d2f72660f092?ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1502&q=80");
+  height: 592.99px;
+}
