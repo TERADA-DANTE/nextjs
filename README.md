@@ -1,2 +1,2 @@
-# nextjs
+# NextJS
 private nextjs training
